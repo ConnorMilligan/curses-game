@@ -49,7 +49,7 @@ else()
         
         set(LIBRARIES "${PROJECT_SOURCE_DIR}/lib/PDCurses/wincon/pdcurses.a")
     else()
-        set(LIBRARIES ncurses)
+        set(LIBRARIES ncurses tinfo)
     endif(WIN32)
 endif(SDL)
 

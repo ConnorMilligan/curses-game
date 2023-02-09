@@ -1,18 +1,15 @@
 #include <curses.h>
-//#include <sdl2/pdcsdl.h>
 
-int main(int argc, char **argv) {
-    wchar_t smile = L'\u00AF';
-    
+#include "window.h"
+
+int main(int argc, char **argv) {    
     initscr();
     
     addstr("Hello, world!\n");
-    addch(smile);
 
+    Window myWin(1, 1, 20, 20);
     getch();
-    //pdc_fwidth = 12;
-    getch();
-
+    myWin.draw();
 
     endwin();
     return 0;
